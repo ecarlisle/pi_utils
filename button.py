@@ -12,9 +12,9 @@ GPIO.setup(11, GPIO.IN)
  
 while True:
         if ( GPIO.input(10) == False ):
-                os.system("/home/pi/projects/pi_lcd/go.py")
+                os.system("./movie_quote.py")
+        if ( GPIO.input(11) == False ):
+                os.system("./weather.py")
         if ( GPIO.input(9) == False ):
-                os.system("/home/pi/projects/pi_lcd/weather.py")
-        if ( GPIO.input(11)== False ):
-                os.system("/home/pi/projects/pi_lcd/weather.py")
+                os.system("./temp_hum.py")
 	sleep(0.1)
